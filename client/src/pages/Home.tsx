@@ -79,12 +79,12 @@ export default function Home() {
       
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 glass border-b-0">
-        <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <img src={logoImg} alt="DatAI Africa Logo" className="h-10 w-10 rounded-full" />
-            <span className="text-xl font-bold font-display tracking-tight text-white">DatAI <span className="text-primary">Africa</span></span>
+        <div className="container mx-auto px-6 h-24 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img src={logoImg} alt="DatAI Africa Logo" className="h-16 w-16 object-contain" />
+            <span className="text-2xl font-bold font-display tracking-tight text-white">DatAI <span className="text-primary">Africa</span></span>
           </div>
-          <Button className="glass-button hidden md:flex rounded-full px-6" onClick={() => document.getElementById('join')?.scrollIntoView({ behavior: 'smooth' })}>
+          <Button className="glass-button hidden md:flex rounded-full px-8 h-12" onClick={() => document.getElementById('join')?.scrollIntoView({ behavior: 'smooth' })}>
             Join Waitlist
           </Button>
         </div>
@@ -104,9 +104,9 @@ export default function Home() {
             variants={staggerContainer}
             className="max-w-4xl mx-auto space-y-8"
           >
-            <motion.div variants={fadeIn} className="flex justify-center mb-6">
-              <div className="p-4 glass rounded-full inline-block">
-                <img src={logoImg} alt="DatAI Africa" className="h-24 w-24 md:h-32 md:w-32 rounded-full shadow-[0_0_40px_rgba(45,212,191,0.2)]" />
+            <motion.div variants={fadeIn} className="flex justify-center mb-8">
+              <div className="p-2 glass rounded-2xl inline-block bg-white/5 backdrop-blur-xl">
+                <img src={logoImg} alt="DatAI Africa" className="h-48 w-48 md:h-64 md:w-64 object-contain drop-shadow-[0_0_30px_rgba(45,212,191,0.4)]" />
               </div>
             </motion.div>
             
