@@ -24,7 +24,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 
 // Assets
-import logoImg from "@assets/generated_images/datai_africa_logo.png";
+import logoImg from "@assets/DatAI_Africa_1767627232330.png";
 import heroBg from "@assets/generated_images/dark_abstract_data_network_background.png";
 import cityBg from "@assets/generated_images/modern_african_city_night_skyline.png";
 import founder1 from "@assets/generated_images/professional_african_man_headshot.png";
