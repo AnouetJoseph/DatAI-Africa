@@ -15,7 +15,11 @@ import {
   Briefcase, 
   GraduationCap, 
   Rocket, 
-  CheckCircle2 
+  CheckCircle2,
+  Linkedin,
+  Twitter,
+  Mail,
+  User
 } from "lucide-react";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -27,9 +31,9 @@ import { useToast } from "@/hooks/use-toast";
 import logoImg from "@assets/DatAI_Africa_1767627232330.png";
 import heroBg from "@assets/generated_images/dark_abstract_data_network_background.png";
 import cityBg from "@assets/generated_images/modern_african_city_night_skyline.png";
-import founder1 from "@assets/generated_images/professional_african_man_headshot.png";
-import founder2 from "@assets/generated_images/professional_african_woman_headshot.png";
-import founder3 from "@assets/generated_images/professional_african_tech_professional_headshot.png";
+import founder1Img from "@assets/generated_images/professional_african_man_headshot.png";
+import founder2Img from "@assets/generated_images/professional_african_woman_headshot.png";
+import founder3Img from "@assets/generated_images/professional_african_tech_professional_headshot.png";
 
 const formSchema = z.object({
   firstName: z.string().min(2, "First name is required"),
@@ -77,16 +81,15 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden font-sans">
       
-      {/* Navigation - Removed top bar background/border for cleaner look */}
+      {/* Navigation - Removed branding and CTA */}
       <nav className="fixed top-0 w-full z-50 bg-transparent">
         <div className="container mx-auto px-6 h-24 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <img src={logoImg} alt="DatAI Africa Logo" className="h-16 w-16 object-contain" />
-            <span className="text-2xl font-bold font-display tracking-tight text-white">DatAI <span className="text-primary">Africa</span></span>
+          <div className="invisible">
+            <img src={logoImg} alt="Logo" className="h-16 w-16" />
           </div>
-          <Button className="glass-button hidden md:flex rounded-full px-8 h-12" onClick={() => document.getElementById('join')?.scrollIntoView({ behavior: 'smooth' })}>
-            Join Waitlist
-          </Button>
+          <div className="invisible">
+            <Button>Join</Button>
+          </div>
         </div>
       </nav>
 
@@ -105,8 +108,8 @@ export default function Home() {
             className="max-w-4xl mx-auto space-y-6"
           >
             <motion.div variants={fadeIn} className="flex justify-center mb-6">
-              <div className="p-2 glass rounded-2xl inline-block bg-white/5 backdrop-blur-xl">
-                <img src={logoImg} alt="DatAI Africa" className="h-40 w-40 md:h-56 md:w-56 object-contain drop-shadow-[0_0_30px_rgba(45,212,191,0.4)]" />
+              <div className="inline-block relative">
+                <img src={logoImg} alt="DatAI Africa" className="h-48 w-48 md:h-64 md:w-64 object-contain drop-shadow-[0_0_50px_rgba(45,212,191,0.7)]" />
               </div>
             </motion.div>
             
@@ -127,7 +130,6 @@ export default function Home() {
               >
                 Join the movement now <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <p className="text-secondary font-medium text-xs tracking-widest uppercase">Builder seats are strictly limited</p>
             </motion.div>
           </motion.div>
         </div>
@@ -249,87 +251,100 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Meet the <span className="text-secondary">Founding Team</span></h2>
-            <p className="text-muted-foreground">Global expertise, locally grounded.</p>
+            <p className="text-muted-foreground">The visionaries architecting the African AI renaissance.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[
-              {
-                name: "Anouet Joseph",
-                role: "AI Product Owner, Morgan Stanley",
-                img: founder1
-              },
-              {
-                name: "Sarah Okeke",
-                role: "Data Scientist, Google AI Accra",
-                img: founder2
-              },
-              {
-                name: "David Mwangi",
-                role: "Tech Lead, Microsoft Nairobi",
-                img: founder3
-              }
+              { name: "Founder 1", role: "Co-Founder", bio: "AI Strategist with global perspective.", img: founder1Img },
+              { name: "Founder 2", role: "Co-Founder", bio: "Data Engineering & Infrastructure lead.", img: founder2Img },
+              { name: "Founder 3", role: "Co-Founder", bio: "Product Innovation & Scale specialist.", img: founder3Img },
+              { name: "Founder 4", role: "Co-Founder", bio: "Community & Ecosystem strategist.", img: founder1Img }
             ].map((founder, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.2 }}
-                className="glass-card overflow-hidden group text-center p-6"
+                transition={{ delay: index * 0.1 }}
+                className="glass-card text-center p-8 group hover:border-primary/50 transition-all duration-500"
               >
-                <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary transition-colors">
-                  <img src={founder.img} alt={founder.name} className="w-full h-full object-cover" />
+                <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-primary/30 group-hover:border-primary group-hover:scale-105 transition-all duration-500">
+                  <img src={founder.img} alt={founder.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
                 </div>
                 <h3 className="text-xl font-bold mb-1">{founder.name}</h3>
-                <p className="text-primary text-sm font-medium">{founder.role}</p>
-                <div className="mt-4 flex justify-center gap-2 opacity-50 hover:opacity-100 transition-opacity">
-                   {/* LinkedIn Icon placeholder */}
-                   <div className="h-1 w-8 bg-white/20 rounded-full"></div>
-                </div>
+                <p className="text-primary text-sm font-medium mb-4">{founder.role}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">{founder.bio}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Ecosystem Section */}
-      <section className="py-24 relative bg-black/20">
-         <div className="absolute inset-0 z-0">
-          <img src={cityBg} alt="City Background" className="w-full h-full object-cover opacity-20 grayscale mix-blend-overlay" />
+      {/* Pillars Section */}
+      <section className="py-24 relative overflow-hidden bg-black/20">
+        <div className="absolute inset-0 z-0">
+          <img src={cityBg} alt="City" className="w-full h-full object-cover opacity-10 grayscale mix-blend-overlay" />
         </div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">A Structured <span className="text-gradient-primary">Innovation Pipeline</span></h2>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-             {["The Mentorship", "The Lab", "The SOCIAL HUB", "THE CONNECT"].map((item, i) => (
-               <div key={i} className="glass p-8 rounded-xl flex flex-col items-center justify-center text-center hover:bg-white/10 transition-colors cursor-default border border-white/5">
-                 <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 text-white font-bold text-xl">
-                   0{i+1}
-                 </div>
-                 <h3 className="font-bold text-lg tracking-wider">{item}</h3>
-               </div>
-             ))}
+        <div className="container px-6 relative z-10">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">A structured <span className="text-gradient-primary">impact approach</span> through our pillars</h2>
+            <p className="text-muted-foreground">Rigorous methodology for a sovereign digital future.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                title: "01 The Advisory",
+                desc: "Strategic intelligence to architect the future. We provide rigorous analysis, high-level thought leadership, and trend forecasting that empowers decision-makers to navigate the evolving AI landscape with sovereign clarity."
+              },
+              {
+                title: "02 The Research and Innovation Lab",
+                desc: "Where theory meets radical execution. We don't just study potential; we build, test, and iterate on high-impact, real-world solutions designed to solve uniquely African challenges through cutting-edge technology."
+              },
+              {
+                title: "03 The Social HUB",
+                desc: "A powerful ecosystem of high-caliber practitioners. We drive deep engagement across the entire spectrum, fostering a community that empowers builders to scale their impact and define the next era of African excellence."
+              }
+            ].map((pillar, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="glass p-10 rounded-2xl border-t-4 border-t-secondary relative group"
+              >
+                <div className="absolute top-4 right-6 text-6xl font-bold opacity-5 group-hover:opacity-10 transition-opacity">
+                  {index + 1}
+                </div>
+                <h3 className="text-2xl font-bold mb-6 text-secondary">{pillar.title}</h3>
+                <p className="text-muted-foreground leading-relaxed font-medium">{pillar.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section id="join" className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent z-0"></div>
         <div className="container px-6 relative z-10">
-          <div className="max-w-4xl mx-auto glass-card p-8 md:p-12 lg:p-16 border-primary/20 shadow-[0_0_50px_rgba(45,212,191,0.1)]">
+          <div className="max-w-4xl mx-auto glass-card p-8 md:p-12 border-primary/20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-4xl font-bold mb-4">Become a <span className="text-secondary">'Pioneer 54'</span></h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Our first program is launching for the first 54 practitioners, founders, and researchers. Join the waitlist for priority access and to receive the <span className="text-white font-medium">DatAI Africa Briefing</span>.
+                  Join the elite circle of builders shaping Africa's AI destiny.
                 </p>
-                <div className="flex items-center gap-3 text-sm text-primary/80">
-                  <CheckCircle2 className="h-4 w-4" /> <span>Priority Access</span>
-                  <CheckCircle2 className="h-4 w-4" /> <span>Weekly Intelligence</span>
+                <div className="flex gap-6 mt-8">
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin className="h-6 w-6" /></a>
+                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Twitter className="h-6 w-6" /></a>
+                  <a href="mailto:contact@dataiafrica.com" className="text-muted-foreground hover:text-primary transition-colors"><Mail className="h-6 w-6" /></a>
                 </div>
               </div>
 
@@ -342,9 +357,8 @@ export default function Home() {
                         name="firstName"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">First Name</FormLabel>
                             <FormControl>
-                              <Input placeholder="Kwame" {...field} className="glass border-white/10 bg-white/5 focus-visible:ring-primary" />
+                              <Input placeholder="First Name" {...field} className="glass" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -355,47 +369,41 @@ export default function Home() {
                         name="lastName"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Last Name</FormLabel>
                             <FormControl>
-                              <Input placeholder="Mensah" {...field} className="glass border-white/10 bg-white/5 focus-visible:ring-primary" />
+                              <Input placeholder="Last Name" {...field} className="glass" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
                         )}
                       />
                     </div>
-
                     <FormField
                       control={form.control}
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">Email Address</FormLabel>
                           <FormControl>
-                            <Input placeholder="kwame@example.com" {...field} className="glass border-white/10 bg-white/5 focus-visible:ring-primary" />
+                            <Input placeholder="Email Address" {...field} className="glass" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
-
                     <FormField
                       control={form.control}
                       name="role"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-xs uppercase tracking-wider text-muted-foreground">I am a...</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger className="glass border-white/10 bg-white/5 focus:ring-primary text-muted-foreground">
+                              <SelectTrigger className="glass">
                                 <SelectValue placeholder="Select your role" />
                               </SelectTrigger>
                             </FormControl>
-                            <SelectContent className="bg-background border-white/10 text-foreground">
+                            <SelectContent>
                               <SelectItem value="practitioner">AI Practitioner</SelectItem>
                               <SelectItem value="founder">Founder</SelectItem>
                               <SelectItem value="researcher">Researcher</SelectItem>
-                              <SelectItem value="aspiring">Aspiring Professional</SelectItem>
                               <SelectItem value="investor">Investor</SelectItem>
                             </SelectContent>
                           </Select>
@@ -403,8 +411,7 @@ export default function Home() {
                         </FormItem>
                       )}
                     />
-
-                    <Button type="submit" className="w-full glass-button mt-4 h-12 text-lg font-bold">
+                    <Button type="submit" className="w-full glass-button h-12 text-lg font-bold">
                       Secure My Spot
                     </Button>
                   </form>
@@ -416,15 +423,22 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-white/5 bg-black/40 text-center">
+      <footer className="py-12 border-t border-white/5 bg-black/40 text-center">
         <div className="container px-6">
-          <div className="flex justify-center items-center gap-2 mb-4">
-             <img src={logoImg} alt="Logo" className="h-6 w-6 rounded-full opacity-70" />
-             <span className="text-sm font-display text-muted-foreground">DatAI Africa &copy; {new Date().getFullYear()}</span>
+          <div className="flex flex-col items-center gap-6">
+            <img src={logoImg} alt="Logo" className="h-12 w-12 object-contain grayscale opacity-50" />
+            <div className="flex gap-8">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin className="h-5 w-5" /></a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Twitter className="h-5 w-5" /></a>
+              <a href="mailto:contact@dataiafrica.com" className="text-muted-foreground hover:text-primary transition-colors"><Mail className="h-5 w-5" /></a>
+            </div>
+            <p className="text-sm text-muted-foreground/50 font-display uppercase tracking-widest">
+              DatAI Africa &copy; {new Date().getFullYear()} &bull; Architecting Sovereignty
+            </p>
           </div>
-          <p className="text-xs text-muted-foreground/50">Building a digital future, made in Africa.</p>
         </div>
       </footer>
     </div>
   );
 }
+
