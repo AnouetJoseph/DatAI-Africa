@@ -77,8 +77,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden font-sans">
       
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 glass border-b-0">
+      {/* Navigation - Removed top bar background/border for cleaner look */}
+      <nav className="fixed top-0 w-full z-50 bg-transparent">
         <div className="container mx-auto px-6 h-24 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={logoImg} alt="DatAI Africa Logo" className="h-16 w-16 object-contain" />
@@ -91,22 +91,22 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src={heroBg} alt="Network Background" className="w-full h-full object-cover opacity-60" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/60 to-background"></div>
         </div>
 
-        <div className="container relative z-10 px-6 text-center">
+        <div className="container relative z-10 px-6 text-center -mt-12">
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="max-w-4xl mx-auto space-y-8"
+            className="max-w-4xl mx-auto space-y-6"
           >
-            <motion.div variants={fadeIn} className="flex justify-center mb-8">
+            <motion.div variants={fadeIn} className="flex justify-center mb-6">
               <div className="p-2 glass rounded-2xl inline-block bg-white/5 backdrop-blur-xl">
-                <img src={logoImg} alt="DatAI Africa" className="h-48 w-48 md:h-64 md:w-64 object-contain drop-shadow-[0_0_30px_rgba(45,212,191,0.4)]" />
+                <img src={logoImg} alt="DatAI Africa" className="h-40 w-40 md:h-56 md:w-56 object-contain drop-shadow-[0_0_30px_rgba(45,212,191,0.4)]" />
               </div>
             </motion.div>
             
@@ -115,11 +115,11 @@ export default function Home() {
               <span className="text-gradient-primary">is African.</span>
             </motion.h1>
 
-            <motion.p variants={fadeIn} className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <motion.p variants={fadeIn} className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Welcome to a pan-African, practitioner-led <span className="text-primary font-bold px-2 py-1 glass rounded-lg border-primary/30">movement</span> to accelerate the contextualized adoption of Data and AI across the continent.
             </motion.p>
 
-            <motion.div variants={fadeIn} className="pt-8 space-y-4">
+            <motion.div variants={fadeIn} className="pt-4 space-y-4">
               <Button 
                 size="lg" 
                 className="h-14 px-8 text-lg rounded-full glass-button shadow-[0_0_30px_rgba(45,212,191,0.15)] animate-pulse"
@@ -127,7 +127,7 @@ export default function Home() {
               >
                 Join the movement now <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <p className="text-secondary font-medium text-sm tracking-widest uppercase">Builder seats are strictly limited</p>
+              <p className="text-secondary font-medium text-xs tracking-widest uppercase">Builder seats are strictly limited</p>
             </motion.div>
           </motion.div>
         </div>
