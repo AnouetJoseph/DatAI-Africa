@@ -115,29 +115,27 @@ export default function Home() {
               <span className="text-gradient-primary">is African.</span>
             </motion.h1>
 
-            <motion.p variants={fadeIn} className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              A pan-African, practitioner-led society accelerating the contextualized adoption of Data and AI across the continent.
+            <motion.p variants={fadeIn} className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Welcome to a pan-African, practitioner-led <span className="text-primary font-bold px-2 py-1 glass rounded-lg border-primary/30">movement</span> to accelerate the contextualized adoption of Data and AI across the continent.
             </motion.p>
 
-            <motion.div variants={fadeIn} className="pt-8">
+            <motion.div variants={fadeIn} className="pt-8 space-y-4">
               <Button 
                 size="lg" 
                 className="h-14 px-8 text-lg rounded-full glass-button shadow-[0_0_30px_rgba(45,212,191,0.15)] animate-pulse"
                 onClick={() => document.getElementById('join')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Join the 'Pioneer 54' Waitlist <ArrowRight className="ml-2 h-5 w-5" />
+                Join the movement now <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+              <p className="text-secondary font-medium text-sm tracking-widest uppercase">Builder seats are strictly limited</p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Problem Section */}
+      {/* Problem Section - Why Now */}
       <section className="py-24 relative">
-        <div className="absolute inset-0 z-0 opacity-20">
-           {/* Abstract grid pattern could go here */}
-        </div>
-        <div className="container px-6 relative z-10">
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div 
             initial="hidden"
             whileInView="visible"
@@ -145,30 +143,27 @@ export default function Home() {
             variants={fadeIn}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Africa Cannot Be a <span className="text-secondary">Mere Consumer</span>.</h2>
+            <h2 className="text-3xl md:text-6xl font-bold mb-6">The challenges are real. <br/><span className="text-secondary">The opportunity is now.</span></h2>
+            <p className="text-muted-foreground text-xl max-w-2xl mx-auto">A premium strategic imperative for the continent's digital sovereignty.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: Globe,
                 title: "The Global AI Tsunami",
-                desc: "AI is ubiquitous, but Africa must be a co-creator, not just a user."
+                desc: "AI is ubiquitous, but Africa must be a co-creator, not just a user. We are at a critical juncture where we either define our future or have it defined for us."
               },
               {
-                icon: Layers,
                 title: "The 'Context' Issue",
-                desc: "Global solutions are biased. We need a new generation of solutions that breathe the African culture."
+                desc: "Global solutions are biased. We need a new generation of solutions that breathe the African culture, catering to our unique languages, markets, and needs."
               },
               {
-                icon: Users,
                 title: "The Demographic Engine",
-                desc: "Africa's young population is an incredible, untapped talent market."
+                desc: "Africa's young population is an incredible, untapped talent market. This is the workforce that will power the global AI economy."
               },
               {
-                icon: Database,
                 title: "The Data Goldmine",
-                desc: "With rapid digitalization, NOW is the time to structure our data for an AI 'transformafrication'."
+                desc: "With rapid digitalization, NOW is the time to structure our data for an AI 'transformafrication'. Our data is our sovereign asset."
               }
             ].map((item, index) => (
               <motion.div
@@ -177,12 +172,11 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="glass-card p-8 group"
+                className="glass-card p-8 group border-t-2 border-t-primary/50"
               >
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary/20 transition-colors">
-                  <item.icon className="h-6 w-6" />
-                </div>
+                <div className="text-primary font-display text-4xl mb-6 opacity-20 group-hover:opacity-100 transition-opacity">0{index + 1}</div>
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                <div className="h-1 w-12 bg-secondary mb-4"></div>
                 <p className="text-muted-foreground leading-relaxed text-sm">{item.desc}</p>
               </motion.div>
             ))}
@@ -190,10 +184,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Unique Value Section */}
+      {/* Unique Value Section - Who Are We */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/5 -skew-y-3 transform origin-top-left scale-110 z-0"></div>
-        <div className="container px-6 relative z-10">
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div 
             initial="hidden"
             whileInView="visible"
@@ -201,29 +195,30 @@ export default function Home() {
             variants={fadeIn}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Founded by <span className="text-primary">Practitioners</span>, for Practitioners.</h2>
-            <p className="text-muted-foreground">Building trust through expertise and execution.</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Movement founded by <span className="text-primary">Practitioners</span>, for Practitioners.</h2>
+            <p className="text-white text-xl max-w-3xl mx-auto font-medium">Our only mission is to gather builders to create true impact.</p>
+            <div className="mt-12 max-w-4xl mx-auto glass p-8 rounded-2xl border-primary/20 bg-primary/5">
+              <p className="text-2xl md:text-3xl font-display leading-tight italic text-primary-foreground/90">
+                "We are not here to observe the revolution. We are here to architect it. This is a power move for the continent—a shift from digital consumption to sovereign creation."
+              </p>
+            </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto mt-20">
             {[
               {
-                icon: Briefcase,
                 title: "Practitioner-Led",
                 desc: "Our leadership knows what to build (Product Owners) and how to build it (AI/Data Practitioners)."
               },
               {
-                icon: Network,
                 title: "The Global-Local Breed",
                 desc: "We are the bridge—Africans succeeding in global firms, translating best practices for the African context."
               },
               {
-                icon: Cpu,
                 title: "Execution-First Ethos",
                 desc: "More than an 'idea-first' club; a 'product-first' society. We build and ship real solutions."
               },
               {
-                icon: Lightbulb,
                 title: "Authentic Pan-African DNA",
                 desc: "We understand the nuances from Abidjan to Nairobi. We build relevant, homegrown solutions."
               }
@@ -233,15 +228,10 @@ export default function Home() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-6 glass p-6 rounded-xl border-l-4 border-l-primary"
+                className="space-y-3"
               >
-                <div className="mt-1">
-                  <item.icon className="h-8 w-8 text-secondary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.desc}</p>
-                </div>
+                <h3 className="text-2xl font-bold text-primary">{item.title}</h3>
+                <p className="text-muted-foreground text-lg leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
