@@ -308,12 +308,12 @@ export default function Home() {
          <div className="absolute inset-0 z-0">
           <img src={cityBg} alt="City Background" className="w-full h-full object-cover opacity-20 grayscale mix-blend-overlay" />
         </div>
-        <div className="container px-6 relative z-10">
+        <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">A Structured <span className="text-gradient-primary">Innovation Pipeline</span></h2>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
              {["The Mentorship", "The Lab", "The SOCIAL HUB", "THE CONNECT"].map((item, i) => (
                <div key={i} className="glass p-8 rounded-xl flex flex-col items-center justify-center text-center hover:bg-white/10 transition-colors cursor-default border border-white/5">
                  <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 text-white font-bold text-xl">
