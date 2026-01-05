@@ -1,0 +1,105 @@
+Role: You are an expert web designer and brand strategist. Your task is to design a visually stunning, professional, and highly credible single-page landing page for "DatAI Africa."
+
+Core Identity: DatAI Africa is a pan-African, practitioner-led society and innovation ecosystem. We are not just a "club"; we are a structured pipeline for African-centric AI solutions. Our mission is to build "A digital future, made in Africa".
+
+Visual Theme & Aesthetics Primary Theme: Glassmorphism (Glass Theme). This is the most important directive. All panels, buttons, and content blocks should have a "frosted glass" effect. This means: Semi-transparent backgrounds.
+
+Background blur (to see the background through the "glass").
+
+A subtle, 1px light-colored border on all glass panels to make them "pop."
+
+Color Palette: Use the Logo.
+
+Primary Colors: The specific teal/cyan and gold/orange from the logo's circuits. Use these for gradients, buttons, and highlights.
+
+Background: Crucial: Use a dark mode background. A very deep charcoal, dark navy, or off-black. This will make the glass effect and the bright logo colors look modern, premium, and high-tech.
+
+Text: Clean white for primary text, and the gold/orange for key headlines.
+
+Logo: Use the provided logo prominently in the "Hero" section.
+
+Fonts: Select a premium, clean, sans-serif font family. (e.g., Inter, Manrope, or a similar high-quality, modern font).
+
+Imagery: Use high-quality, professional images of modern African cities (Nairobi, Abidjan, etc.), diverse young African professionals in tech, and abstract data/AI network graphics that incorporate the blue and orange colors.
+
+Website Structure (Single-Page Layout) Design a top-to-bottom flow with these distinct "glass" panels as sections: [Section 1: The Hero]
+
+Visual: Full-screen. The dark background with a subtle, abstract gradient.
+
+Logo: DatAI Africa logo, front and center.
+
+Headline: The Future of AI is African.
+
+Sub-headline: A pan-African, practitioner-led society accelerating the contextualized adoption of Data and AI across the continent.
+
+Primary Call-to-Action (CTA): A prominent "glass" button: Join the 'Pioneer 54' Waitlist
+
+[Section 2: The Problem (The 'Why')]
+
+Title: Africa Cannot Be a Mere Consumer.
+
+Content: Use 4 "glass" info cards for the key problems:
+
+The Global AI Tsunami: "AI is ubiquitous, but Africa must be a co-creator, not just a user."
+
+The 'Context' Issue: "Global solutions are biased. We need a new generation of solutions that breathe the African culture."
+
+The Demographic Engine: "Africa's young population is an incredible, untapped talent market."
+
+The Data Goldmine: "With rapid digitalization, NOW is the time to structure our data for an AI 'transformafrication'."
+
+[Section 3: Our Unique Value (The 'How')]
+
+Title: Founded by Practitioners, for Practitioners.
+
+Content: This section builds trust. Use icons for these 4 points:
+
+Practitioner-Led: "Our leadership knows what to build (Product Owners) and how to build it (AI/Data Practitioners)."
+
+The Global-Local Breed: "We are the bridge—Africans succeeding in global firms, translating best practices for the African context."
+
+Execution-First Ethos: "More than an 'idea-first' club; a 'product-first' society. We build and ship real solutions."
+
+Authentic Pan-African DNA: "We understand the nuances from Abidjan to Nairobi. We build relevant, homegrown solutions."
+
+[Section 4: The Founders (The 'Who')]
+
+Title: Meet the Founding Team
+
+Content: This is critical for credibility. Create "glass" profile cards for the founders.
+
+Include: A professional headshot, Name, and one-line bio.
+
+Example: Anouet Joseph, AI Product Owner, Morgan Stanley
+
+(This section immediately proves your "Global-Local Breed" and "Practitioner-Led" claims.)
+
+[Section 5: Our Ecosystem (The 'What')]
+
+Title: A Structured Innovation Pipeline
+
+Content: A simple overview of your programs (The Mentorship , The Lab , The SOCIAL HUB , THE CONNECT ). Frame them as the ecosystem for members.
+
+[Section 6: The Final Call to Action (The 'Now')]
+
+Headline: Become a 'Pioneer 54'
+
+Text: "Our first program, 'Pioneer 54,' is launching for the first 54 practitioners, founders, and researchers. Join the waitlist for priority access and to receive the DatAI Africa newsletter."
+
+Form: A simple, embedded "glass" form:
+
+First Name
+
+Last Name
+
+Email Address
+
+I am a... (Dropdown: AI Practitioner, Founder, Researcher, Aspiring Professional, etc.)
+
+Button: Secure My Spot
+
+Strategic Marketing Recommendations Urgency & Exclusivity (The 'Pioneer 54' Hook): Naming the waitlist "Pioneer 54" is a genius move. It connects to the 54 countries of Africa, implies it's a limited, prestigious first cohort, and creates strong urgency. This must be the primary CTA. Founder-Led Credibility: By placing your (and other founders') names and titles (e.g., "Morgan Stanley") on the site, you are borrowing credibility from established global brands. This instantly tells visitors you are serious and well-connected.
+
+Lead Magnet: The "newsletter" should be framed as a high-value asset, not just a subscription. Call it "The DatAI Africa Briefing"—a weekly intelligence report on African-centric AI.
+
+Social Proof: Add a small section in the footer for the LinkedIn Page. This is your community hub.
