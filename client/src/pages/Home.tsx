@@ -3,7 +3,9 @@ import {
   ArrowRight, 
   Linkedin,
   Twitter,
-  Mail
+  Mail,
+  ChevronDown,
+  Heart
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -31,14 +33,58 @@ export default function Home() {
     }
   };
 
+  const founders = [
+    { 
+      name: "Anouet Joseph", 
+      role: "Co-Founder", 
+      title: "Chief Strategist & Executive Chairman",
+      affiliation: "Morgan Stanley",
+      bio: "Leading the architectural vision and long-term strategic direction of the movement.", 
+      img: founder1Img 
+    },
+    { 
+      name: "Dr. Patrick Duhirwe", 
+      role: "Co-Founder", 
+      title: "Chief Research & Innovation",
+      affiliation: "University of Texas",
+      bio: "Driving cutting-edge R&D and contextualized AI innovation for the continent.", 
+      img: founder2Img 
+    },
+    { 
+      name: "Champion Musinde", 
+      role: "Co-Founder", 
+      title: "Chief Operations & Delivery",
+      affiliation: "Sanofi",
+      bio: "Ensuring execution excellence and scalable deployment across African markets.", 
+      img: founder3Img 
+    },
+    { 
+      name: "Abel Gnonsoa", 
+      role: "Co-Founder", 
+      title: "Chief Growth & Partnership",
+      affiliation: "Tata Consultancy Services",
+      bio: "Expanding the ecosystem and building strategic global-local alliances.", 
+      img: founder1Img 
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden font-sans selection:bg-primary/30 selection:text-white antialiased">
       
-      {/* Navigation - Hidden */}
-      <nav className="fixed top-0 w-full z-50 bg-transparent">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full z-50 bg-background/5 backdrop-blur-sm border-b border-white/5">
         <div className="container mx-auto px-6 h-24 flex items-center justify-between">
-          <div className="invisible">
-            <img src={logoImg} alt="DatAI Africa Logo" className="h-16 w-16" />
+          <div className="flex items-center gap-3">
+            <img src={logoImg} alt="DatAI Africa Logo" className="h-12 w-12 object-contain" />
+            <span className="text-xl font-bold font-display tracking-tight text-white uppercase">DatAI <span className="text-primary">Africa</span></span>
+          </div>
+          <div className="flex items-center gap-6">
+            <Button variant="ghost" className="text-white hover:text-primary transition-colors gap-2 hidden sm:flex">
+              <Heart className="h-4 w-4 fill-primary text-primary" /> Donate
+            </Button>
+            <Button className="glass-button rounded-full px-8 h-12 font-medium">
+              Join Us
+            </Button>
           </div>
         </div>
       </nav>
@@ -72,16 +118,35 @@ export default function Home() {
               Welcome to a pan-African, practitioner-led <span className="text-primary font-semibold border-b border-primary/30 not-italic">movement</span> to accelerate the contextualized adoption of Data and AI across the continent.
             </motion.p>
 
-            <motion.div variants={fadeIn} className="pt-6">
+            <motion.div variants={fadeIn} className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
               <button 
-                className="h-16 px-12 text-xl rounded-full glass-button shadow-[0_0_40px_rgba(45,212,191,0.2)] hover:scale-105 transition-all duration-500 font-medium tracking-tight flex items-center justify-center mx-auto"
+                className="h-16 px-12 text-xl rounded-full glass-button shadow-[0_0_40px_rgba(45,212,191,0.2)] hover:scale-105 transition-all duration-500 font-medium tracking-tight flex items-center justify-center"
                 onClick={() => document.getElementById('pillars')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Join the movement now <ArrowRight className="ml-2 h-6 w-6" />
               </button>
+              <Button variant="outline" size="lg" className="h-16 px-10 rounded-full border-primary/20 hover:border-primary/50 text-xl font-medium tracking-tight gap-2">
+                <Heart className="h-6 w-6 text-primary fill-primary" /> Support our mission
+              </Button>
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2, duration: 1 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/50"
+        >
+          <span className="text-xs uppercase tracking-[0.3em] font-medium">Scroll to explore</span>
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+          >
+            <ChevronDown className="h-6 w-6" />
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Problem Section - Why Now */}
@@ -202,30 +267,26 @@ export default function Home() {
             className="text-center mb-24"
           >
             <h2 className="text-4xl md:text-7xl font-bold mb-6 tracking-tighter font-display uppercase">Meet the <span className="text-secondary">Founding Team</span></h2>
-            <p className="text-muted-foreground text-2xl font-light tracking-wide">The visionaries behind the marathon.</p>
+            <p className="text-muted-foreground text-2xl font-light tracking-wide italic">The visionaries behind the marathon.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto place-items-center">
-            {[
-              { name: "Anouet Joseph", role: "Co-Founder", bio: "AI Strategist with global perspective.", img: founder1Img },
-              { name: "Sarah Okeke", role: "Co-Founder", bio: "Data Engineering & Infrastructure lead.", img: founder2Img },
-              { name: "David Mwangi", role: "Co-Founder", bio: "Product Innovation & Scale specialist.", img: founder3Img },
-              { name: "Kofi Mensah", role: "Co-Founder", bio: "Community & Ecosystem strategist.", img: founder1Img }
-            ].map((founder, index) => (
+            {founders.map((founder, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
-                className="glass-card text-center p-10 group hover:border-primary/50 transition-all duration-700 shadow-xl w-full"
+                className="glass-card text-center p-10 group hover:border-primary/50 transition-all duration-700 shadow-xl w-full flex flex-col items-center"
               >
-                <div className="relative w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary group-hover:scale-105 transition-all duration-700 shadow-2xl">
+                <div className="relative w-40 h-40 mb-8 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary group-hover:scale-105 transition-all duration-700 shadow-2xl">
                   <img src={founder.img} alt={founder.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2 tracking-tight uppercase">{founder.name}</h3>
-                <p className="text-primary text-base font-semibold mb-6 uppercase tracking-widest">{founder.role}</p>
-                <p className="text-muted-foreground text-base leading-relaxed font-light">{founder.bio}</p>
+                <h3 className="text-2xl font-bold mb-1 tracking-tight uppercase">{founder.name}</h3>
+                <p className="text-primary text-sm font-semibold mb-1 uppercase tracking-widest">{founder.title}</p>
+                <p className="text-muted-foreground/60 text-xs font-medium mb-6 uppercase tracking-wider italic">Ex-{founder.affiliation}</p>
+                <p className="text-muted-foreground text-base leading-relaxed font-light flex-grow">{founder.bio}</p>
               </motion.div>
             ))}
           </div>
@@ -294,9 +355,9 @@ export default function Home() {
             variants={fadeIn}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter font-display uppercase">Join the <span className="text-secondary">Revolution</span></h2>
+            <h2 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter font-display uppercase">Stay in the <span className="text-secondary">Loop</span></h2>
             <p className="text-2xl text-muted-foreground mb-16 font-light max-w-2xl mx-auto tracking-wide italic">
-              Connect with us to be part of the Pioneer 54 — the elite circle of builders shaping Africa's AI destiny.
+              Follow our journey and engage with the movement. Reach out to collaborate or learn more about our strategic mission.
             </p>
             
             <div className="flex flex-wrap justify-center gap-10 md:gap-20">
@@ -328,11 +389,6 @@ export default function Home() {
         <div className="container px-6 mx-auto">
           <div className="flex flex-col items-center gap-8">
             <img src={logoImg} alt="Logo" className="h-16 w-16 object-contain grayscale opacity-30 hover:opacity-80 transition-opacity duration-700" />
-            <div className="flex gap-12">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin className="h-6 w-6" /></a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Twitter className="h-6 w-6" /></a>
-              <a href="mailto:contact@dataiafrica.com" className="text-muted-foreground hover:text-primary transition-colors"><Mail className="h-6 w-6" /></a>
-            </div>
             <div className="space-y-2">
               <p className="text-base text-muted-foreground/40 font-display uppercase tracking-[0.3em]">
                 DatAI Africa &copy; {new Date().getFullYear()} &bull; Architecting Sovereignty
