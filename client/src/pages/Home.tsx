@@ -36,58 +36,28 @@ export default function Home() {
   const founders = [
     { 
       name: "Anouet Joseph", 
-      role: "Co-Founder", 
       title: "Chief Strategist & Executive Chairman",
-      affiliation: "Morgan Stanley",
-      bio: "Leading the architectural vision and long-term strategic direction of the movement.", 
       img: founder1Img 
     },
     { 
       name: "Dr. Patrick Duhirwe", 
-      role: "Co-Founder", 
       title: "Chief Research & Innovation",
-      affiliation: "University of Texas",
-      bio: "Driving cutting-edge R&D and contextualized AI innovation for the continent.", 
       img: founder2Img 
     },
     { 
       name: "Champion Musinde", 
-      role: "Co-Founder", 
       title: "Chief Operations & Delivery",
-      affiliation: "Sanofi",
-      bio: "Ensuring execution excellence and scalable deployment across African markets.", 
       img: founder3Img 
     },
     { 
       name: "Abel Gnonsoa", 
-      role: "Co-Founder", 
       title: "Chief Growth & Partnership",
-      affiliation: "Tata Consultancy Services",
-      bio: "Expanding the ecosystem and building strategic global-local alliances.", 
       img: founder1Img 
     }
   ];
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden font-sans selection:bg-primary/30 selection:text-white antialiased">
-      
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-background/5 backdrop-blur-sm border-b border-white/5">
-        <div className="container mx-auto px-6 h-24 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <img src={logoImg} alt="DatAI Africa Logo" className="h-12 w-12 object-contain" />
-            <span className="text-xl font-bold font-display tracking-tight text-white uppercase">DatAI <span className="text-primary">Africa</span></span>
-          </div>
-          <div className="flex items-center gap-6">
-            <Button variant="ghost" className="text-white hover:text-primary transition-colors gap-2 hidden sm:flex">
-              <Heart className="h-4 w-4 fill-primary text-primary" /> Donate
-            </Button>
-            <Button className="glass-button rounded-full px-8 h-12 font-medium">
-              Join Us
-            </Button>
-          </div>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -132,19 +102,19 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Scroll Indicator - Visual Only */}
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/50"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
         >
-          <span className="text-xs uppercase tracking-[0.3em] font-medium">Scroll to explore</span>
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+            animate={{ y: [0, 12, 0] }}
+            transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
+            className="text-muted-foreground/40"
           >
-            <ChevronDown className="h-6 w-6" />
+            <ChevronDown className="h-8 w-8" />
           </motion.div>
         </motion.div>
       </section>
@@ -283,10 +253,9 @@ export default function Home() {
                 <div className="relative w-40 h-40 mb-8 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary group-hover:scale-105 transition-all duration-700 shadow-2xl">
                   <img src={founder.img} alt={founder.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100" />
                 </div>
-                <h3 className="text-2xl font-bold mb-1 tracking-tight uppercase">{founder.name}</h3>
-                <p className="text-primary text-sm font-semibold mb-1 uppercase tracking-widest">{founder.title}</p>
-                <p className="text-muted-foreground/60 text-xs font-medium mb-6 uppercase tracking-wider italic">Ex-{founder.affiliation}</p>
-                <p className="text-muted-foreground text-base leading-relaxed font-light flex-grow">{founder.bio}</p>
+                <h3 className="text-2xl font-bold mb-2 tracking-tight uppercase">{founder.name}</h3>
+                <p className="text-primary/60 text-xs font-semibold mb-1 uppercase tracking-widest">Co-Founder</p>
+                <p className="text-primary text-sm font-semibold uppercase tracking-widest">{founder.title}</p>
               </motion.div>
             ))}
           </div>
