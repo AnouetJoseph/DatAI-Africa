@@ -36,22 +36,30 @@ export default function Home() {
   const founders = [
     { 
       name: "Anouet Joseph", 
-      title: "Chief Strategist & Executive Chairman",
+      title: "Chairman",
+      bio: "Anouet currently serves as a Data & AI Product Owner at Morgan Stanley, where he builds enterprise-grade data solutions.",
+      linkedin: "https://www.linkedin.com/in/legbedjy-joseph-parfait-anouet-578a14151/",
       img: founder1Img 
     },
     { 
       name: "Dr. Patrick Duhirwe", 
       title: "Chief Research & Innovation",
+      bio: "Patrick leads AI research initiatives at the University of Texas, focusing on machine learning applications for emerging markets.",
+      linkedin: "#",
       img: founder2Img 
     },
     { 
       name: "Champion Musinde", 
       title: "Chief Operations & Delivery",
+      bio: "Champion drives operational excellence at Sanofi, specializing in digital transformation and large-scale project delivery.",
+      linkedin: "#",
       img: founder3Img 
     },
     { 
       name: "Abel Gnonsoa", 
       title: "Chief Growth & Partnership",
+      bio: "Abel leads strategic partnerships at Tata Consultancy Services, building global-local alliances across the technology sector.",
+      linkedin: "#",
       img: founder1Img 
     }
   ];
@@ -91,12 +99,12 @@ export default function Home() {
             <motion.div variants={fadeIn} className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
               <button 
                 className="h-16 px-12 text-xl rounded-full glass-button shadow-[0_0_40px_rgba(45,212,191,0.2)] hover:scale-105 transition-all duration-500 font-medium tracking-tight flex items-center justify-center"
-                onClick={() => document.getElementById('pillars')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('join')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Join the movement now <ArrowRight className="ml-2 h-6 w-6" />
+                Request an invitation now <ArrowRight className="ml-2 h-6 w-6" />
               </button>
               <Button variant="outline" size="lg" className="h-16 px-10 rounded-full border-primary/20 hover:border-primary/50 text-xl font-medium tracking-tight gap-2">
-                <Heart className="h-6 w-6 text-primary fill-primary" /> Support our mission
+                <Heart className="h-6 w-6 text-primary fill-primary" /> Become a Patron
               </Button>
             </motion.div>
           </motion.div>
@@ -255,7 +263,16 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold mb-2 tracking-tight uppercase">{founder.name}</h3>
                 <p className="text-primary/60 text-xs font-semibold mb-1 uppercase tracking-widest">Co-Founder</p>
-                <p className="text-primary text-sm font-semibold uppercase tracking-widest">{founder.title}</p>
+                <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">{founder.title}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed font-light mb-6 flex-grow">{founder.bio}</p>
+                <a 
+                  href={founder.linkedin} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground/50 hover:text-primary transition-colors"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
               </motion.div>
             ))}
           </div>
