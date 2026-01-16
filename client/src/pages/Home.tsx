@@ -40,28 +40,32 @@ export default function Home() {
       title: "Chairman",
       bio: "Anouet currently serves as a Data & AI Product Owner at Morgan Stanley, where he builds enterprise-grade data solutions.",
       linkedin: "https://www.linkedin.com/in/legbedjy-joseph-parfait-anouet-578a14151/",
-      img: josephImg 
+      img: josephImg,
+      objectPos: "object-[center_20%]"
     },
     { 
       name: "Dr. Patrick Duhirwe", 
       title: "Head of Research & Innovation",
       bio: "Patrick leads AI research initiatives at the University of Texas, focusing on machine learning applications for emerging markets.",
       linkedin: "#",
-      img: patricImg 
+      img: patricImg,
+      objectPos: "object-center"
     },
     { 
       name: "Champion Musinde", 
       title: "Head of Operations & Delivery",
       bio: "Champion currently serves as a Business Solutions Expert and AI Business Analyst at Sanofi, where he delivers technology-driven solutions to business challenges as part of the Digital R&D Pipeline and Project Analytics department.",
       linkedin: "#",
-      img: championImg 
+      img: championImg,
+      objectPos: "object-center"
     },
     { 
       name: "Abel Gnonsoa", 
       title: "Head of Growth & Partnership",
-      bio: "MIT-certified Al transformation leader turning complex data into human-centric, innovation-driving intelligence.",
+      bio: "Abel is an MIT-certified Al transformation leader turning complex data into human-centric, innovation-driving intelligence.",
       linkedin: "#",
-      img: abelImg 
+      img: abelImg,
+      objectPos: "object-[center_15%]"
     }
   ];
 
@@ -259,8 +263,8 @@ export default function Home() {
                 transition={{ delay: index * 0.1, duration: 0.8 }}
                 className="glass-card text-center p-10 group hover:border-primary/50 transition-all duration-700 shadow-xl w-full flex flex-col items-center"
               >
-                <div className="relative w-40 h-40 mb-8 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary group-hover:scale-105 transition-all duration-700 shadow-2xl">
-                  <img src={founder.img} alt={founder.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100" />
+                <div className="relative w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary group-hover:scale-105 transition-all duration-700 shadow-2xl">
+                  <img src={founder.img} alt={founder.name} className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100 ${founder.objectPos}`} />
                 </div>
                 <h3 className="text-2xl font-bold mb-2 tracking-tight uppercase">{founder.name}</h3>
                 <p className="text-primary/60 text-xs font-semibold mb-1 uppercase tracking-widest">Co-Founder</p>
