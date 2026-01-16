@@ -13,9 +13,10 @@ import { Button } from "@/components/ui/button";
 import logoImg from "@assets/DatAI_Africa_1767627232330.png";
 import heroBg from "@assets/generated_images/dark_abstract_data_network_background.png";
 import cityBg from "@assets/generated_images/modern_african_city_night_skyline.png";
-import founder1Img from "@assets/generated_images/professional_african_man_headshot.png";
-import founder2Img from "@assets/generated_images/professional_african_woman_headshot.png";
-import founder3Img from "@assets/generated_images/professional_african_tech_professional_headshot.png";
+import josephImg from "@assets/Joseph_1768602254403.jpg";
+import patricImg from "@assets/Patric_1768602254402.jpeg";
+import championImg from "@assets/Champion_1768602254401.jpeg";
+import abelImg from "@assets/Abel_1768602254403.jpeg";
 
 export default function Home() {
   const fadeIn = {
@@ -39,28 +40,28 @@ export default function Home() {
       title: "Chairman",
       bio: "Anouet currently serves as a Data & AI Product Owner at Morgan Stanley, where he builds enterprise-grade data solutions.",
       linkedin: "https://www.linkedin.com/in/legbedjy-joseph-parfait-anouet-578a14151/",
-      img: founder1Img 
+      img: josephImg 
     },
     { 
       name: "Dr. Patrick Duhirwe", 
-      title: "Chief Research & Innovation",
+      title: "Head of Research & Innovation",
       bio: "Patrick leads AI research initiatives at the University of Texas, focusing on machine learning applications for emerging markets.",
       linkedin: "#",
-      img: founder2Img 
+      img: patricImg 
     },
     { 
       name: "Champion Musinde", 
-      title: "Chief Operations & Delivery",
-      bio: "Champion drives operational excellence at Sanofi, specializing in digital transformation and large-scale project delivery.",
+      title: "Head of Operations & Delivery",
+      bio: "Champion currently serves as a Business Solutions Expert and AI Business Analyst at Sanofi, where he delivers technology-driven solutions to business challenges as part of the Digital R&D Pipeline and Project Analytics department.",
       linkedin: "#",
-      img: founder3Img 
+      img: championImg 
     },
     { 
       name: "Abel Gnonsoa", 
-      title: "Chief Growth & Partnership",
-      bio: "Abel leads strategic partnerships at Tata Consultancy Services, building global-local alliances across the technology sector.",
+      title: "Head of Growth & Partnership",
+      bio: "MIT-certified Al transformation leader turning complex data into human-centric, innovation-driving intelligence.",
       linkedin: "#",
-      img: founder1Img 
+      img: abelImg 
     }
   ];
 
