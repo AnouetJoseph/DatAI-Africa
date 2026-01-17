@@ -36,7 +36,7 @@ export default function Home() {
 
   const founders = [
     { 
-      name: "Anouet Joseph", 
+      name: <>Anouet<br />Joseph</>, 
       title: "Chairman",
       bio: "Anouet currently serves as a Data & AI Product Owner at Morgan Stanley, where he builds enterprise-grade data solutions.",
       linkedin: "https://www.linkedin.com/in/legbedjy-joseph-parfait-anouet-578a14151/",
@@ -60,7 +60,7 @@ export default function Home() {
       objectPos: "object-center"
     },
     { 
-      name: "Abel Gnonsoa", 
+      name: <>Abel<br />Gnonsoa</>, 
       title: "Head of Growth & Partnership",
       bio: "Abel is an MIT-certified Al transformation leader turning complex data into human-centric, innovation-driving intelligence.",
       linkedin: "#",
