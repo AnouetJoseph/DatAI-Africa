@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import logoImg from "@assets/DatAI_Africa_1767627232330.png";
 import heroBg from "@assets/generated_images/dark_abstract_data_network_background.png";
 import cityBg from "@assets/generated_images/modern_african_city_night_skyline.png";
-import josephImg from "@assets/generated_images/professional_headshot_on_white_background.png";
+import josephImg from "@assets/Gemini_Generated_Image_x6dbs2x6dbs2x6db_1768662252813.png";
 import patricImg from "@assets/Patric_1768602254402.jpeg";
 import championImg from "@assets/Champion_1768602254401.jpeg";
 import abelImg from "@assets/Abel_1768602254403.jpeg";
@@ -41,7 +41,7 @@ export default function Home() {
       bio: "Anouet currently serves as a Data & AI Product Owner at Morgan Stanley, where he builds enterprise-grade data solutions.",
       linkedin: "https://www.linkedin.com/in/legbedjy-joseph-parfait-anouet-578a14151/",
       img: josephImg,
-      objectPos: "object-center"
+      objectPos: "object-[center_10%]"
     },
     { 
       name: "Dr. Patrick Duhirwe", 
