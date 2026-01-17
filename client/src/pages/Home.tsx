@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import logoImg from "@assets/DatAI_Africa_1767627232330.png";
 import heroBg from "@assets/generated_images/dark_abstract_data_network_background.png";
 import cityBg from "@assets/generated_images/modern_african_city_night_skyline.png";
-import josephImg from "@assets/Gemini_Generated_Image_j0cvu3j0cvu3j0cv_1768662397099.png";
+import josephImg from "@assets/Gemini_Generated_Image_uxy6qhuxy6qhuxy6_1768663580224.png";
 import patricImg from "@assets/Patric_1768602254402.jpeg";
 import championImg from "@assets/Champion_1768602254401.jpeg";
 import abelImg from "@assets/Abel_1768602254403.jpeg";
