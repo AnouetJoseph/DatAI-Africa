@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import logoImg from "@assets/DatAI_Africa_1767627232330.png";
 import heroBg from "@assets/generated_images/dark_abstract_data_network_background.png";
 import cityBg from "@assets/generated_images/modern_african_city_night_skyline.png";
-import josephImg from "@assets/Joseph_1768602254403.jpg";
+import josephImg from "@assets/Gemini_Generated_Image_f75lk1f75lk1f75l_1768661795969.png";
 import patricImg from "@assets/Patric_1768602254402.jpeg";
 import championImg from "@assets/Champion_1768602254401.jpeg";
 import abelImg from "@assets/Abel_1768602254403.jpeg";
@@ -54,7 +54,7 @@ export default function Home() {
     { 
       name: "Champion Musinde", 
       title: "Head of Operations & Delivery",
-      bio: "Champion currently serves as a Business Solutions Expert and AI Business Analyst at Sanofi, where he delivers technology-driven solutions to business challenges as part of the Digital R&D Pipeline and Project Analytics department.",
+      bio: "Champion currently serves as a Business Solutions Expert and AI Business Analyst at Sanofi, where he delivers technology-driven solutions to business challenges.",
       linkedin: "#",
       img: championImg,
       objectPos: "object-center"
