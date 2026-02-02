@@ -12,7 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 // Assets
-import logoImg from "/logo-new.png";
+import logoImg from "/logo.png";
 import heroBg from "@assets/generated_images/dark_abstract_data_network_background.png";
 import cityBg from "@assets/generated_images/modern_african_city_night_skyline.png";
 import josephImg from "@assets/Gemini_Generated_Image_uxy6qhuxy6qhuxy6_1768663580224.png";
@@ -170,7 +170,10 @@ export default function Home() {
   const t = translations[lang];
 
   useEffect(() => {
-    // Language detection removed to default to English
+    const userLang = navigator.language || (navigator as any).userLanguage;
+    if (userLang && userLang.toLowerCase().startsWith('fr')) {
+      setLang('fr');
+    }
   }, []);
 
   const fadeIn = {
