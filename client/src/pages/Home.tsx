@@ -24,7 +24,14 @@ const translations = {
   en: {
     heroTitle: "The Future of AI",
     heroTitleSpan: "is African.",
-    heroSubtitle: "Welcome to a pan-African, practitioner-led movement to accelerate the contextualized adoption of Data and AI across the continent.",
+    heroSubtitle: (
+      <>
+        Welcome to a pan-African, practitioner-led <span className="text-primary font-bold underline decoration-primary/50 underline-offset-8">movement</span> to accelerate the contextualized adoption of Data and AI across the continent.
+        <div className="mt-6 text-sm font-medium tracking-[0.2em] opacity-40 not-italic uppercase">
+          DatAI Africa / pronounced "That AI Africa"
+        </div>
+      </>
+    ),
     ctaInvite: "Request an invitation now",
     ctaPatron: "Become a Patron",
     problemTitle: "The challenges are real.",
@@ -95,7 +102,14 @@ const translations = {
   fr: {
     heroTitle: "L'Avenir de l'IA",
     heroTitleSpan: "est Africain.",
-    heroSubtitle: "Bienvenue dans un mouvement panafricain dirigé par des praticiens pour accélérer l'adoption contextualisée des données et de l'IA sur le continent.",
+    heroSubtitle: (
+      <>
+        Bienvenue dans un <span className="text-primary font-bold underline decoration-primary/50 underline-offset-8">mouvement</span> panafricain dirigé par des praticiens pour accélérer l'adoption contextualisée des données et de l'IA sur le continent.
+        <div className="mt-6 text-sm font-medium tracking-[0.2em] opacity-40 not-italic uppercase">
+          DatAI Africa / prononcé "That AI Africa"
+        </div>
+      </>
+    ),
     ctaInvite: "Demandez une invitation maintenant",
     ctaPatron: "Devenir un Mécène",
     problemTitle: "Les défis sont réels.",
