@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
   ArrowRight, 
@@ -169,6 +169,13 @@ export default function Home() {
   const [lang, setLang] = useState<'en' | 'fr'>('en');
   const t = translations[lang];
 
+  useEffect(() => {
+    const userLang = navigator.language || (navigator as any).userLanguage;
+    if (userLang && userLang.toLowerCase().startsWith('fr')) {
+      setLang('fr');
+    }
+  }, []);
+
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
@@ -274,7 +281,7 @@ export default function Home() {
                 {t.ctaInvite} <ArrowRight className="ml-2 h-6 w-6" />
               </a>
               <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdppYge-mLmt2OMtjejebl5zyjf7ZFIN1ZhPV131LqdNS_AJw/viewform?usp=dialog"
+                href={lang === 'en' ? "https://docs.google.com/forms/d/e/1FAIpQLSdppYge-mLmt2OMtjejebl5zyjf7ZFIN1ZhPV131LqdNS_AJw/viewform?usp=dialog" : "https://docs.google.com/forms/d/e/1FAIpQLScjmKtYUtNLYy7O3xP5JFDryaOWaKmwSkQgdM6jLFyL5NMlVw/viewform?usp=publish-editor"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-16 px-10 rounded-full border-2 border-primary/30 hover:border-primary/50 text-xl font-medium tracking-tight flex items-center justify-center gap-2 no-underline hover:bg-primary/5 transition-all"
