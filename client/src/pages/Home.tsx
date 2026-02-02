@@ -46,7 +46,7 @@ export default function Home() {
     { 
       name: "Dr. Patrick Duhirwe", 
       title: "Head of Research & Innovation",
-      bio: "Patrick leads AI research initiatives at the University of Texas, focusing on machine learning applications for emerging markets.",
+      bio: "Patrick is a Postdoctoral Fellow at the University of Texas at San Antonio. His work focuses on intelligent sensing, data-driven optimization, and trustworthy machine-learning models for energy and building automation systems.",
       linkedin: "#",
       img: patricImg,
       objectPos: "object-center"
