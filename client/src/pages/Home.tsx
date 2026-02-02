@@ -506,7 +506,7 @@ export default function Home() {
                 </div>
                 <span className="text-sm font-medium tracking-widest uppercase opacity-50 group-hover:opacity-100 transition-opacity">LinkedIn</span>
               </a>
-              <a href="mailto:contact@dataiafrica.com" className="flex flex-col items-center gap-4 group" data-testid="link-email">
+              <a href="mailto:contact@dataiafrica.org" className="flex flex-col items-center gap-4 group" data-testid="link-email">
                 <div className="h-20 w-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary group-hover:scale-110 transition-all duration-500 shadow-xl">
                   <Mail className="h-8 w-8 text-muted-foreground group-hover:text-primary transition-colors" />
                 </div>
