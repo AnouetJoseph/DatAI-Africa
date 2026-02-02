@@ -273,7 +273,7 @@ export default function Home() {
           >
             <motion.div variants={fadeIn} className="flex justify-center mb-4">
               <div className="inline-block relative">
-                <img src={logoImg} alt="DatAI Africa" className="h-44 w-44 md:h-64 md:w-64 object-contain drop-shadow-[0_0_60px_rgba(45,212,191,0.8)]" />
+                <img src={logoImg} alt="DatAI Africa" className="h-56 w-56 md:h-80 md:w-80 object-contain drop-shadow-[0_0_70px_rgba(45,212,191,0.9)]" />
               </div>
             </motion.div>
             
