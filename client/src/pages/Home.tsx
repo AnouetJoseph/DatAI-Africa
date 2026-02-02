@@ -265,7 +265,7 @@ export default function Home() {
 
             <motion.div variants={fadeIn} className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdy1mSu5rldQJJ2mDkztHfsz5iRY1XjVjpIJoX2GTNSRa5mCg/viewform?usp=dialog"
+                href={lang === 'en' ? "https://docs.google.com/forms/d/e/1FAIpQLSdy1mSu5rldQJJ2mDkztHfsz5iRY1XjVjpIJoX2GTNSRa5mCg/viewform?usp=dialog" : "https://docs.google.com/forms/d/e/1FAIpQLSeQ7numsuNxq0iAcrxH9zr4Q6wqKrYpG7Tlb2R30m4sNEKg_A/viewform?usp=publish-editor"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-16 px-12 text-xl rounded-full glass-button shadow-[0_0_40px_rgba(45,212,191,0.2)] hover:scale-105 transition-all duration-500 font-medium tracking-tight flex items-center justify-center no-underline"
