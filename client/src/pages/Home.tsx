@@ -170,9 +170,11 @@ export default function Home() {
   const t = translations[lang];
 
   useEffect(() => {
+    // Only set to French if the language is explicitly French
     const userLang = navigator.language || (navigator as any).userLanguage;
     if (userLang && userLang.toLowerCase().startsWith('fr')) {
-      setLang('fr');
+      // Manual check for French, but we'll default to 'en' in state initialization
+      // setLang('fr'); // Commenting out to ensure EN is the default even for FR users
     }
   }, []);
 
