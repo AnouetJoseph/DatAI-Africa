@@ -102,12 +102,14 @@ export default function Home() {
             </motion.p>
 
             <motion.div variants={fadeIn} className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button 
-                className="h-16 px-12 text-xl rounded-full glass-button shadow-[0_0_40px_rgba(45,212,191,0.2)] hover:scale-105 transition-all duration-500 font-medium tracking-tight flex items-center justify-center"
-                onClick={() => document.getElementById('join')?.scrollIntoView({ behavior: 'smooth' })}
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdy1mSu5rldQJJ2mDkztHfsz5iRY1XjVjpIJoX2GTNSRa5mCg/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-16 px-12 text-xl rounded-full glass-button shadow-[0_0_40px_rgba(45,212,191,0.2)] hover:scale-105 transition-all duration-500 font-medium tracking-tight flex items-center justify-center no-underline"
               >
                 Request an invitation now <ArrowRight className="ml-2 h-6 w-6" />
-              </button>
+              </a>
               <Button variant="outline" size="lg" className="h-16 px-10 rounded-full border-primary/20 hover:border-primary/50 text-xl font-medium tracking-tight gap-2">
                 <Heart className="h-6 w-6 text-primary fill-primary" /> Become a Patron
               </Button>
@@ -198,7 +200,7 @@ export default function Home() {
             <p className="text-white text-2xl max-w-3xl mx-auto font-light tracking-wide">Our only mission is to gather builders to create true impact.</p>
             <div className="mt-16 max-w-4xl mx-auto glass p-12 rounded-3xl border-primary/20 bg-primary/5 shadow-2xl relative group">
               <div className="absolute -top-6 -left-6 text-primary/20 text-9xl font-serif">"</div>
-              <p className="text-3xl md:text-4xl font-display leading-tight italic text-primary-foreground/90 relative z-10 font-medium">
+              <p className="text-3xl md:text-4xl font-display leading-tight italic text-white relative z-10 font-medium">
                 "We are not here to observe the revolution. We are here to architect it. This is a power move for the continent—a shift from digital consumption to sovereign creation."
               </p>
             </div>
@@ -352,17 +354,11 @@ export default function Home() {
             </p>
             
             <div className="flex flex-wrap justify-center gap-10 md:gap-20">
-              <a href="#" className="flex flex-col items-center gap-4 group">
+              <a href="https://www.linkedin.com/company/datai-africa/" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-4 group">
                 <div className="h-20 w-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary group-hover:scale-110 transition-all duration-500 shadow-xl">
                   <Linkedin className="h-8 w-8 text-muted-foreground group-hover:text-primary transition-colors" />
                 </div>
                 <span className="text-sm font-medium tracking-widest uppercase opacity-50 group-hover:opacity-100 transition-opacity">LinkedIn</span>
-              </a>
-              <a href="#" className="flex flex-col items-center gap-4 group">
-                <div className="h-20 w-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary group-hover:scale-110 transition-all duration-500 shadow-xl">
-                  <Twitter className="h-8 w-8 text-muted-foreground group-hover:text-primary transition-colors" />
-                </div>
-                <span className="text-sm font-medium tracking-widest uppercase opacity-50 group-hover:opacity-100 transition-opacity">Twitter</span>
               </a>
               <a href="mailto:contact@dataiafrica.com" className="flex flex-col items-center gap-4 group">
                 <div className="h-20 w-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary group-hover:scale-110 transition-all duration-500 shadow-xl">
