@@ -220,7 +220,7 @@ export default function Home() {
       name: "Dr. Patrick Duhirwe", 
       title: lang === 'en' ? "Head of Research & Innovation" : "Responsable de la Recherche et de l'Innovation",
       bio: lang === 'en' ? "Patrick is a Postdoctoral Fellow at the University of Texas at San Antonio. His work focuses on intelligent sensing, data-driven optimization, and trustworthy machine-learning models for energy and building automation systems." : "Patrick est chercheur postdoctoral à l'Université du Texas à San Antonio. Ses travaux portent sur la détection intelligente, l'optimisation basée sur les données et les modèles d'apprentissage automatique fiables pour les systèmes d'énergie et d'automatisation des bâtiments.",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/patrickduhirwe/",
       img: patricImg,
       objectPos: "object-center"
     },
@@ -228,7 +228,7 @@ export default function Home() {
       name: "Champion Musinde", 
       title: lang === 'en' ? "Head of Operations & Delivery" : "Responsable des Opérations et de la Livraison",
       bio: lang === 'en' ? "Champion currently serves as a Business Solutions Expert and AI Business Analyst at Sanofi, where he delivers technology-driven solutions to business challenges." : "Champion occupe actuellement le poste d'Expert en Solutions d'Affaires et Analyste d'Affaires IA chez Sanofi, où il livre des solutions technologiques aux défis de l'entreprise.",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/champion-nyembo-mca-4019a26a/",
       img: championImg,
       objectPos: "object-center"
     },
@@ -236,7 +236,7 @@ export default function Home() {
       name: <>Abel<br />Gnonsoa</>, 
       title: lang === 'en' ? "Head of Growth & Partnership" : "Responsable de la Croissance et des Partenariats",
       bio: lang === 'en' ? "Abel is an MIT-certified Al transformation leader turning complex data into human-centric, innovation-driving intelligence." : "Abel est un leader de la transformation IA certifié par le MIT, transformant des données complexes en une intelligence centrée sur l'humain et moteur d'innovation.",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/abel-toh-41613b1b7/",
       img: abelImg,
       objectPos: "object-[center_15%]"
     }
