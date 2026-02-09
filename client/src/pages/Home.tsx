@@ -26,14 +26,14 @@ const translations = {
     heroTitleSpan: "is African.",
     heroSubtitle: (
       <>
-        Welcome to a pan-African, practitioner-led <span className="text-primary font-bold underline decoration-primary/50 underline-offset-8">movement</span> to accelerate the contextualized adoption of Data and AI across the continent.
+        Welcome to a pan-African, practitioner-led <span className="text-primary font-bold underline decoration-primary/50 underline-offset-8">initiative</span> to accelerate the contextualized adoption of Data and AI across the continent.
         <div className="mt-6 text-sm font-medium tracking-[0.2em] opacity-40 not-italic uppercase">
           DatAI Africa / pronounced "That AI Africa"
         </div>
       </>
     ),
     ctaInvite: "Request an invitation now",
-    ctaPatron: "Become a Patron",
+    ctaPatron: "Become a Sponsor",
     problemTitle: "The challenges are real.",
     problemTitleSpan: "The opportunity is now.",
     problemSubtitle: "A premium strategic imperative for the continent's sovereignty.",
@@ -55,7 +55,7 @@ const translations = {
         desc: "With rapid digitalization, NOW is the time to structure our data for an AI 'transformafrication'. Our data is our sovereign asset."
       }
     ],
-    practitionerTitle: "Movement founded by Practitioners, for Practitioners.",
+    practitionerTitle: "Initiative founded by Practitioners, for Practitioners.",
     practitionerSubtitle: "Our only mission is to gather builders to create true impact.",
     practitionerQuote: "We are not here to observe the revolution. We are here to architect it. This is a power move for the continent—a shift from digital consumption to sovereign creation.",
     valueProp: [
@@ -104,14 +104,14 @@ const translations = {
     heroTitleSpan: "est Africain.",
     heroSubtitle: (
       <>
-        Bienvenue dans un <span className="text-primary font-bold underline decoration-primary/50 underline-offset-8">mouvement</span> panafricain dirigé par des praticiens pour accélérer l'adoption contextualisée des données et de l'IA sur le continent.
+        Bienvenue dans une <span className="text-primary font-bold underline decoration-primary/50 underline-offset-8">initiative</span> panafricain dirigé par des praticiens pour accélérer l'adoption contextualisée des données et de l'IA sur le continent.
         <div className="mt-6 text-sm font-medium tracking-[0.2em] opacity-40 not-italic uppercase">
           DatAI Africa / prononcé "That AI Africa"
         </div>
       </>
     ),
     ctaInvite: "Demandez une invitation maintenant",
-    ctaPatron: "Devenir un Mécène",
+    ctaPatron: "Devenir un Sponsor",
     problemTitle: "Les défis sont réels.",
     problemTitleSpan: "L'opportunité est maintenant.",
     problemSubtitle: "Un impératif stratégique de premier plan pour la souveraineté du continent.",
@@ -133,7 +133,7 @@ const translations = {
         desc: "Avec la numérisation rapide, c'est MAINTENANT le moment de structurer nos données pour une 'transformafrication' par l'IA. Nos données sont notre atout souverain."
       }
     ],
-    practitionerTitle: "Mouvement fondé par des Praticiens, pour des Praticiens.",
+    practitionerTitle: "Initiative fondée par des Praticiens, pour des Praticiens.",
     practitionerSubtitle: "Notre seule mission est de rassembler les bâtisseurs pour créer un véritable impact.",
     practitionerQuote: "Nous ne sommes pas ici pour observer la révolution. Nous sommes ici pour l'architecturer. C'est un mouvement de pouvoir pour le continent—un passage de la consommation numérique à la création souveraine.",
     valueProp: [
