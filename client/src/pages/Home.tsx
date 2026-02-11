@@ -399,52 +399,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Founders Section */}
-      <section className="py-32 relative">
-        <div className="container px-6 mx-auto">
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
-            className="text-center mb-24"
-          >
-            <h2 className="text-4xl md:text-7xl font-bold mb-6 tracking-tighter font-display uppercase">{t.teamTitle}</h2>
-            <p className="text-muted-foreground text-2xl font-light tracking-wide italic">{t.teamSubtitle}</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto items-stretch">
-            {founders.map((founder, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.8 }}
-                className="glass-card text-center p-10 group hover:border-primary/50 transition-all duration-700 shadow-xl w-full flex flex-col items-center h-full"
-              >
-                <div className="relative w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary group-hover:scale-105 transition-all duration-700 shadow-2xl">
-                  <img src={founder.img} alt={typeof founder.name === 'string' ? founder.name : 'Founder'} className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100 ${founder.objectPos}`} />
-                </div>
-                <h3 className="text-2xl font-bold mb-2 tracking-tight uppercase">{founder.name}</h3>
-                <p className="text-primary/60 text-xs font-semibold mb-1 uppercase tracking-widest">Co-Founder</p>
-                <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">{founder.title}</p>
-                <p className="text-muted-foreground text-sm leading-relaxed font-light mb-6 flex-grow">{founder.bio}</p>
-                <a 
-                  href={founder.linkedin} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground/50 hover:text-primary transition-colors"
-                  data-testid={`link-linkedin-${index}`}
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pillars Section */}
       <section id="pillars" className="py-32 relative overflow-hidden bg-black/30">
         <div className="absolute inset-0 z-0">
