@@ -33,7 +33,7 @@ const translations = {
       </>
     ),
     ctaInvite: "Request an invitation now",
-    ctaPatron: "Become a Sponsor",
+    ctaPatron: "Become a sponsor",
     problemTitle: "The challenges are real.",
     problemTitleSpan: "The opportunity is now.",
     problemSubtitle: "A premium strategic imperative for the continent's sovereignty.",
@@ -111,7 +111,7 @@ const translations = {
       </>
     ),
     ctaInvite: "Demandez une invitation maintenant",
-    ctaPatron: "Devenir un Sponsor",
+    ctaPatron: "Devenir un sponsor",
     problemTitle: "Les défis sont réels.",
     problemTitleSpan: "L'opportunité est maintenant.",
     problemSubtitle: "Un impératif stratégique de premier plan pour la souveraineté du continent.",
