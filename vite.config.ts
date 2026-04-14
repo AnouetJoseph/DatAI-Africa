@@ -39,7 +39,7 @@ export default defineConfig({
   },
   root: path.resolve(dirname, "client"),
   build: {
-    outDir: path.resolve(dirname, "dist"),
+    outDir: path.resolve(dirname, "dist/public"),
     emptyOutDir: true,
   },
   server: {
