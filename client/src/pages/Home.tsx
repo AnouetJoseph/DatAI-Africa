@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
-  ArrowRight, 
   Linkedin,
   Twitter,
   Mail,
   ChevronDown,
-  Heart,
   Globe
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 // Assets
 import logoImg from "/logo.png";
@@ -32,8 +29,6 @@ const translations = {
         </div>
       </>
     ),
-    ctaInvite: "Request an invitation now",
-    ctaPatron: "Become a sponsor",
     problemTitle: "The challenges are real.",
     problemTitleSpan: "The opportunity is now.",
     problemSubtitle: "A premium strategic imperative for the continent's sovereignty.",
@@ -110,8 +105,6 @@ const translations = {
         </div>
       </>
     ),
-    ctaInvite: "Demandez une invitation maintenant",
-    ctaPatron: "Devenir un sponsor",
     problemTitle: "Les défis sont réels.",
     problemTitleSpan: "L'opportunité est maintenant.",
     problemSubtitle: "Un impératif stratégique de premier plan pour la souveraineté du continent.",
@@ -286,26 +279,6 @@ export default function Home() {
               {t.heroSubtitle}
             </motion.p>
 
-            <motion.div variants={fadeIn} className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
-                href={lang === 'en' ? "https://docs.google.com/forms/d/e/1FAIpQLSdy1mSu5rldQJJ2mDkztHfsz5iRY1XjVjpIJoX2GTNSRa5mCg/viewform?usp=dialog" : "https://docs.google.com/forms/d/e/1FAIpQLSeQ7numsuNxq0iAcrxH9zr4Q6wqKrYpG7Tlb2R30m4sNEKg_A/viewform?usp=publish-editor"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="h-16 px-12 text-xl rounded-full glass-button shadow-[0_0_40px_rgba(45,212,191,0.2)] hover:scale-105 transition-all duration-500 font-medium tracking-tight flex items-center justify-center no-underline"
-                data-testid="link-request-invitation"
-              >
-                {t.ctaInvite} <ArrowRight className="ml-2 h-6 w-6" />
-              </a>
-              <a 
-                href={lang === 'en' ? "https://docs.google.com/forms/d/e/1FAIpQLSdppYge-mLmt2OMtjejebl5zyjf7ZFIN1ZhPV131LqdNS_AJw/viewform?usp=dialog" : "https://docs.google.com/forms/d/e/1FAIpQLScjmKtYUtNLYy7O3xP5JFDryaOWaKmwSkQgdM6jLFyL5NMlVw/viewform?usp=publish-editor"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="h-16 px-10 rounded-full border-2 border-primary/30 hover:border-primary/50 text-xl font-medium tracking-tight flex items-center justify-center gap-2 no-underline hover:bg-primary/5 transition-all"
-                data-testid="link-become-patron"
-              >
-                <Heart className="h-6 w-6 text-primary fill-primary" /> {t.ctaPatron}
-              </a>
-            </motion.div>
           </motion.div>
         </div>
 
